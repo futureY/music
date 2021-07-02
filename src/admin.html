@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理页面</title>
+</head>
+<body>
+   <script src="../node_modules/leancloud-storage/dist/av-min.js"></script> 
+    <script>
+	    const TestObject = AV.Object.extend('TestObject');
+const testObject = new TestObject();
+testObject.set('words', 'Hello world!');
+testObject.save().then((testObject) => {
+  alert('保存成功。');
+})
+
+//    AV.init({
+//   appId: "{{ShSUfaAutslmk7ax5PigCpkp-gzGzoHsz}}",
+//   appKey: "{{WpQYQ4Jtq2K08uOYCuWJJIAq}}",
+//   serverURL: "https://shsufaau.lc-cn-n1-shared.com"
+// });
+// //创建数据库
+// const TestObject = AV.Object.extend('TestObject');
+// //创建一条记录
+// const testObject = new TestObject();
+// //保存记录
+// testObject.set('words', 'Hello world!');
+// testObject.save().then((testObject) => {
+//   console.log('保存成功。')
+// })
+    </script>
+</body>
+</html>
